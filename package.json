@@ -1,0 +1,30 @@
+{
+  "name": "NGT-cypress",
+  "version": "1.0.0",
+  "description": "Boilerplate arquitetura cypress com cucumber.",
+  "main": "index.js",
+  "author": "Valentina Andrade",
+  "license": "MIT",
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-multi-reporters": "^1.6.3",
+    "dayjs": "^1.11.9",
+    "fs": "^0.0.1-security",
+    "mocha-junit-reporter": "^2.2.1",
+    "moment": "^2.29.4",
+    "multiple-cucumber-html-reporter": "^3.4.0",
+    "tedious": "^16.4.0",
+    "yarn": "^1.22.21"
+  },
+  "scripts": {
+    "test:dev": "npx cypress run --browser edge --reporter junit --env BASE_URL=https://portal-ngt-qa.mgr.services/#/ngt/access",
+    "test:hom": "npx cypress run --browser edge --reporter junit --env BASE_URL=http://10.200.12.244:1917/#/",
+    "test:local": "npx cypress open --env BASE_URL=https://portal-ngt-qa.mgr.services/#/ngt/access",
+    "test:especifico": "npx cypress run --browser edge --spec \"cypress/features/teste.feature\" --env BASE_URL=http://10.200.12.244:1917/#/ngt",
+    "start": "npx cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "cypress-mailhog": "^2.3.0"
+  }
+}

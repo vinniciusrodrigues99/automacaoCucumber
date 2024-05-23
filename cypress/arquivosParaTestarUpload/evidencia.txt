@@ -1,0 +1,4 @@
+Funcionário justifica sua ausência com um atestado médico. 
+
+Contratos criados através dos testes: 
+V12345678, V23456789, F12345678, F2345678
